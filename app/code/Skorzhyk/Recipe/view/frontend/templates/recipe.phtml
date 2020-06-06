@@ -1,0 +1,64 @@
+<?php
+/**
+ * @var $block Fidesio\Recipe\Block\Recipe
+ */
+
+$recipes = $block->getRecipes();
+$isChef = $block->isCustomerChef();
+?>
+<?php if ($recipes) : ?>
+    <table class="table-recipe">
+        <thead>
+            <tr>
+                <th class="col name"><?= /* @noEscape */ __('Nom') ?></th>
+                <th class="col status"><?= /* @noEscape */ __('Statut') ?></th>
+                <th class="col download -center"><?= /* @noEscape */ __('Telecharger') ?></th>
+                <?php if ($isChef) : ?>
+                    <th class="col"></th>
+                <?php endif; ?>
+            </tr>
+        </thead>
+        <?php foreach ($recipes as $recipe) : ?>
+            <tr>
+                <td class="name">
+                    <div class="inner">
+                        <?= /* @noEscape */ $recipe->getTitle(); ?>
+                    </div>
+                </td>
+                <td>
+                    <div class="inner">
+                        <?= /* @noEscape */ $recipe->getStatusLabel(); ?>
+                    </div>
+                </td>
+                <td>
+                    <a class="download-icon inner" href="<?= /* @noEscape */ $block->getFileUrl($recipe); ?>" download title="<?= __('Download') ?>"></a>
+                </td>
+                <?php if ($isChef) : ?>
+                    <td>
+                        <a data-mage-init='{"Fidesio_Recipe/js/remove-recipe": {}}'
+                           href="<?= /* @noEscape */ $block->getRemoveUrl($recipe); ?>" class="action-delete inner" title="<?= __("Remove") ?>"></a>
+                    </td>
+                <?php endif; ?>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php else: ?>
+    <div class="no-recipes" style="margin: 10px 0 25px;">
+        <div class="notice message">
+            <div><?= __('You have no recipes available.') ?></div>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if ($isChef) : ?>
+    <form class="button-link recipe-form" action="<?= /* @noEscape */ $block->getSaveUrl() ?>"
+          id="recipe-form" method="post" enctype='multipart/form-data'>
+        <div class="field image">
+            <label class="label" for="file"><?= /* @noEscape */ __('Ajouter une nouvelle recette') ?></label>
+            <div class="control">
+                <input name="file" id="file" title="file" value="" class="input-file" type="file"
+                       onchange="form.submit()">
+            </div>
+        </div>
+        <input name="form_key" type="hidden" value="<?= /* @noEscape */ $block->getFormKey() ?>"/>
+    </form>
+<?php endif; ?>

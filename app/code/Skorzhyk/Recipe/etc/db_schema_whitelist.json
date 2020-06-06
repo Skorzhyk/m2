@@ -1,0 +1,55 @@
+{
+    "skorzhyk_recipe": {
+        "column": {
+            "entity_id": true,
+            "title": true,
+            "description": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "skorzhyk_ingredient": {
+        "column": {
+            "entity_id": true,
+            "name": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    },
+    "skorzhyk_recipe_ingredient": {
+        "column": {
+            "entity_id": true,
+            "recipe_id": true,
+            "ingredient_id": true
+        },
+        "index": {
+            "SKORHYK_RECIPE_INGREDIENT_RECIPE_ID": true,
+            "SKORHYK_RECIPE_INGREDIENT_INGREDIENT_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "SKORHYK_RECIPE_INGREDIENT_RECIPE_ID_SKORHYK_RECIPE_ENTITY_ID": true,
+            "FK_2673BD6CE5755B40EE356CCA4245AE4C": true
+        }
+    },
+    "skorzhyk_recipe_step": {
+        "column": {
+            "entity_id": true,
+            "recipe_id": true,
+            "order_number": true,
+            "description": true
+        },
+        "index": {
+            "SKORHYK_RECIPE_STEP_RECIPE_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "SKORHYK_RECIPE_STEP_ENTITY_ID_SKORHYK_RECIPE_ENTITY_ID": true
+        }
+    }
+}

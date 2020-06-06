@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="skorzhyk_recipe" resource="default" engine="innodb"
+           comment="Recipe Table" charset="utf8"
+           collation="utf8_general_ci">
+        <column xsi:type="int" name="entity_id" padding="20" unsigned="true" nullable="false" identity="true"
+                comment="Recipe ID"/>
+        <column xsi:type="varchar" name="title" nullable="false" length="255" comment="Recipe title"/>
+        <column xsi:type="text" name="description" nullable="false" comment="Description"/>
+        <column xsi:type="boolean" name="status" nullable="false" default="0" comment="Recipe status"/>
+        <column xsi:type="timestamp" name="created_at" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Created At"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="true" default="CURRENT_TIMESTAMP"
+                comment="Updated At"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+    <table name="skorzhyk_ingredient" resource="default" engine="innodb"
+           comment="Ingredient Table" charset="utf8"
+           collation="utf8_general_ci">
+        <column xsi:type="int" name="entity_id" padding="20" unsigned="true" nullable="false" identity="true"
+                comment="Ingredient ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Ingredient name"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+    </table>
+    <table name="skorzhyk_recipe_ingredient" resource="default" engine="innodb"
+           comment="Recipe Ingredient Table" charset="utf8"
+           collation="utf8_general_ci">
+        <column xsi:type="int" name="entity_id" padding="20" unsigned="true" nullable="false" identity="true"/>
+        <column xsi:type="int" name="recipe_id" padding="20" unsigned="true" nullable="false" identity="false"
+                comment="Recipe ID"/>
+        <column xsi:type="int" name="ingredient_id" padding="20" unsigned="true" nullable="false" identity="false"
+                comment="Ingredient Id"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign"
+                    referenceId="SKORHYK_RECIPE_ENTITY_ID"
+                    column="recipe_id"
+                    referenceTable="skorzhyk_recipe"
+                    referenceColumn="entity_id"
+                    onDelete="CASCADE"/>
+        <constraint xsi:type="foreign"
+                    referenceId="SKORHYK_INGREDIENT_ENTITY_ID"
+                    column="ingredient_id"
+                    referenceTable="skorzhyk_ingredient"
+                    referenceColumn="entity_id"
+                    onDelete="CASCADE"/>
+        <index referenceId="SKORHYK_RECIPE_ENTITY_ID" indexType="btree">
+            <column name="recipe_id"/>
+        </index>
+        <index referenceId="SKORHYK_INGREDIENT_ENTITY_ID" indexType="btree">
+            <column name="ingredient_id"/>
+        </index>
+    </table>
+    <table name="skorzhyk_recipe_step" resource="default" engine="innodb"
+           comment="Ingredient Table" charset="utf8"
+           collation="utf8_general_ci">
+        <column xsi:type="int" name="entity_id" padding="20" unsigned="true" nullable="false" identity="true"
+                comment="Ingredient ID"/>
+        <column xsi:type="int" name="recipe_id" padding="20" unsigned="true" nullable="false" identity="false"
+                comment="Recipe ID"/>
+        <column xsi:type="int" name="order_number" padding="20" unsigned="true" nullable="false" identity="false"
+                comment="Order Number"/>
+        <column xsi:type="text" name="description" nullable="false" comment="Description"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="foreign"
+                    referenceId="SKORHYK_RECIPE_ENTITY_ID"
+                    column="recipe_id"
+                    referenceTable="skorzhyk_recipe"
+                    referenceColumn="entity_id"
+                    onDelete="CASCADE"/>
+        <index referenceId="SKORHYK_RECIPE_ENTITY_ID" indexType="btree">
+            <column name="recipe_id"/>
+        </index>
+    </table>
+</schema>
