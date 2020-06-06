@@ -68,5 +68,7 @@ atlassian*
 !/generated/.htaccess
 .DS_Store
 
+/app/etc/config.php
+
 /clean/
 /deploy/
