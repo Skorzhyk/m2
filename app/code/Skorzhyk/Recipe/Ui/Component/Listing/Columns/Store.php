@@ -1,8 +1,8 @@
 <?php
 
-namespace Fidesio\Recipe\Ui\Component\Listing\Columns;
+namespace Skorzhyk\Recipe\Ui\Component\Listing\Columns;
 
-use Fidesio\Recipe\Model\RecipeFactory;
+use Skorzhyk\Recipe\Model\RecipeFactory;
 use Magento\Framework\App\ObjectManager;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;

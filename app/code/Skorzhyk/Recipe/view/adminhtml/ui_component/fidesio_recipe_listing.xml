@@ -3,10 +3,10 @@
          xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">fidesio_recipe_listing.fidesio_recipe_listing_data_source</item>
-            <item name="deps" xsi:type="string">fidesio_recipe_listing.fidesio_recipe_listing_data_source</item>
+            <item name="provider" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source</item>
+            <item name="deps" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source</item>
         </item>
-        <item name="spinner" xsi:type="string">fidesio_recipe_listing_columns</item>
+        <item name="spinner" xsi:type="string">skorzhyk_recipe_listing_columns</item>
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
@@ -16,12 +16,12 @@
             </item>
         </item>
     </argument>
-    <dataSource name="fidesio_recipe_listing_data_source">
+    <dataSource name="skorzhyk_recipe_listing_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">
                 Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider
             </argument>
-            <argument name="name" xsi:type="string">fidesio_recipe_listing_data_source</argument>
+            <argument name="name" xsi:type="string">skorzhyk_recipe_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">recipe_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
@@ -50,7 +50,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
-                        <item name="namespace" xsi:type="string">fidesio_recipe_listing</item>
+                        <item name="namespace" xsi:type="string">skorzhyk_recipe_listing</item>
                         <item name="saveUrl" xsi:type="url" path="mui/bookmark/save"/>
                         <item name="deleteUrl" xsi:type="url" path="mui/bookmark/delete"/>
                     </item>
@@ -64,7 +64,7 @@
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing.fidesio_recipe_listing.fidesio_recipe_columns
+                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_columns
                         </item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
@@ -77,7 +77,7 @@
                 <item name="config" xsi:type="array">
                     <item name="columnsData" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing.fidesio_recipe_listing.fidesio_recipe_listing_columns
+                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_listing_columns
                         </item>
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
@@ -88,14 +88,14 @@
         <filterSearch name="fulltext">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="provider" xsi:type="string">fidesio_recipe_listing.fidesio_recipe_listing_data_source
+                    <item name="provider" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source
                     </item>
                     <item name="chipsProvider" xsi:type="string">
-                        fidesio_recipe_listing.fidesio_recipe_listing.listing_top.listing_filters_chips
+                        skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters_chips
                     </item>
                     <item name="storageConfig" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing.fidesio_recipe_listing.listing_top.bookmarks
+                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks
                         </item>
                         <item name="namespace" xsi:type="string">current.search</item>
                     </item>
@@ -109,17 +109,17 @@
                     <item name="dataScope" xsi:type="string">filters</item>
                     <item name="storageConfig" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing.fidesio_recipe_listing.listing_top.bookmarks
+                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks
                         </item>
                         <item name="namespace" xsi:type="string">current.filters</item>
                     </item>
                     <item name="childDefaults" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing.fidesio_recipe_listing.listing_top.listing_filters
+                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters
                         </item>
                         <item name="imports" xsi:type="array">
                             <item name="visible" xsi:type="string">
-                                fidesio_recipe_listing.fidesio_recipe_listing.listing_top.bookmarks:current.columns.${ $.index }.visible
+                                skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks:current.columns.${ $.index }.visible
                             </item>
                         </item>
                     </item>
@@ -132,7 +132,7 @@
                         <item name="label" xsi:type="string" translate="true">ID</item>
                         <item name="childDefaults" xsi:type="array">
                             <item name="provider" xsi:type="string">
-                                fidesio_recipe_listing.fidesio_recipe_listing.listing_top.listing_filters
+                                skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters
                             </item>
                         </item>
                     </item>
@@ -161,7 +161,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="selectProvider" xsi:type="string">
-                        fidesio_recipe_listing.fidesio_recipe_listing.fidesio_recipe_listing_columns.ids
+                        skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_listing_columns.ids
                     </item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/tree-massactions</item>
                     <item name="indexField" xsi:type="string">recipe_id</item>
@@ -184,19 +184,19 @@
                 <item name="config" xsi:type="array">
                     <item name="storageConfig" xsi:type="array">
                         <item name="provider" xsi:type="string">
-                            fidesio_recipe_listing_columns.fidesio_recipe_listing_columns.listing_top.bookmarks
+                            skorzhyk_recipe_listing_columns.skorzhyk_recipe_listing_columns.listing_top.bookmarks
                         </item>
                         <item name="namespace" xsi:type="string">current.paging</item>
                     </item>
                     <item name="selectProvider" xsi:type="string">
-                        fidesio_recipe_listing.fidesio_recipe_listing.fidesio_recipe_listing_columns.ids
+                        skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_listing_columns.ids
                     </item>
                     <item name="displayArea" xsi:type="string">bottom</item>
                 </item>
             </argument>
         </paging>
     </container>
-    <columns name="fidesio_recipe_listing_columns">
+    <columns name="skorzhyk_recipe_listing_columns">
         <selectionsColumn name="ids">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -219,7 +219,7 @@
         </column>
         <column name="customer_id">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">\Fidesio\Recipe\Ui\Component\Listing\Columns\Chef</item>
+                <item name="options" xsi:type="object">\Skorzhyk\Recipe\Ui\Component\Listing\Columns\Chef</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Chef</item>
@@ -237,7 +237,7 @@
         </column>
         <column name="status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Fidesio\Recipe\Ui\Component\Listing\Columns\Status</item>
+                <item name="options" xsi:type="object">Skorzhyk\Recipe\Ui\Component\Listing\Columns\Status</item>
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">status</item>
@@ -277,7 +277,7 @@
                 </item>
             </argument>
         </column>
-        <column name="store_id" class="Fidesio\Recipe\Ui\Component\Listing\Columns\Store">
+        <column name="store_id" class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\Store">
             <settings>
                 <label translate="true">Store View</label>
                 <bodyTmpl>ui/grid/cells/html</bodyTmpl>
@@ -306,7 +306,7 @@
                 </item>
             </argument>
         </column>
-        <actionsColumn name="actions" class="Fidesio\Recipe\Ui\Component\Listing\Columns\RecipeActions">
+        <actionsColumn name="actions" class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\RecipeActions">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">false</item>

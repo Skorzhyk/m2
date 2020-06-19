@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Adminhtml\File;
+namespace Skorzhyk\Recipe\Controller\Adminhtml\File;
 
 use Exception;
 use Magento\Backend\App\Action;
@@ -13,7 +13,7 @@ use Magento\Framework\Controller\ResultInterface;
 
 /**
  * Upload
- * @package Fidesio\Recipe\Controller\Adminhtml\File
+ * @package Skorzhyk\Recipe\Controller\Adminhtml\File
  */
 class Upload extends Action
 {
@@ -68,6 +68,6 @@ class Upload extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fidesio_Base::activate');
+        return true;
     }
 }

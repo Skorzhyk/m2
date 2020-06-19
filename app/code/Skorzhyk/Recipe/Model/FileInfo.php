@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\File\Mime;
@@ -11,13 +11,13 @@ use Magento\Framework\Filesystem\Directory\WriteInterface;
 use Magento\Framework\UrlInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Exception\FileSystemException;
-use Fidesio\Recipe\Model\Config\Source\RecipeConfig;
+use Skorzhyk\Recipe\Model\Config\Source\RecipeConfig;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
  * Class FileInfo
  *
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class FileInfo
 {

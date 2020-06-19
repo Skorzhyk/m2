@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
 use Magento\Catalog\Model\ImageUploader;
 use Magento\Framework\Exception\FileSystemException;
 use Magento\Framework\Exception\LocalizedException;
-use Fidesio\Recipe\Model\Config\Source\RecipeConfig;
+use Skorzhyk\Recipe\Model\Config\Source\RecipeConfig;
 
 /**
  * Class MoveFile
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class MoveFile
 {

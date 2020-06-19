@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="customer_account_navigation">
-            <block class="Fidesio\Customer\Block\Account\Link" name="customer-account-navigation-recipe" after="-">
+            <block class="Skorzhyk\Customer\Block\Account\Link" name="customer-account-navigation-recipe" after="-">
                 <arguments>
                     <argument name="path" xsi:type="string">recipe/customer/index</argument>
                     <argument name="label" xsi:type="string" translate="true">Mes recettes</argument>

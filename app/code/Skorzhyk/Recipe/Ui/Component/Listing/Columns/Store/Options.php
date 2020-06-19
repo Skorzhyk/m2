@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\Recipe\Ui\Component\Listing\Columns\Store;
+namespace Skorzhyk\Recipe\Ui\Component\Listing\Columns\Store;
 
 use Magento\Store\Ui\Component\Listing\Column\Store\Options as StoreOptions;
 

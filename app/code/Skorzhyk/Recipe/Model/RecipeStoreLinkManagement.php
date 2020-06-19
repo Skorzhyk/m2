@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
-use Fidesio\Recipe\Model\RecipeStoreLink;
-use Fidesio\Recipe\Model\ResourceModel\RecipeStoreLink as ResourceRecipeStoreLink;
-use Fidesio\Recipe\Model\ResourceModel\RecipeStoreLink\Collection;
-use Fidesio\Recipe\Model\ResourceModel\RecipeStoreLink\CollectionFactory;
+use Skorzhyk\Recipe\Model\RecipeStoreLink;
+use Skorzhyk\Recipe\Model\ResourceModel\RecipeStoreLink as ResourceRecipeStoreLink;
+use Skorzhyk\Recipe\Model\ResourceModel\RecipeStoreLink\Collection;
+use Skorzhyk\Recipe\Model\ResourceModel\RecipeStoreLink\CollectionFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\App\ResourceConnection;
 
 /**
  * Class RecipeStoreLinkManagement
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class RecipeStoreLinkManagement
 {

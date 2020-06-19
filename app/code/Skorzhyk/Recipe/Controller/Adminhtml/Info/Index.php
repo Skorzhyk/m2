@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Adminhtml\Info;
+namespace Skorzhyk\Recipe\Controller\Adminhtml\Info;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -13,7 +13,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Index
- * @package Fidesio\Recipe\Controller\Adminhtml\Info
+ * @package Skorzhyk\Recipe\Controller\Adminhtml\Info
  */
 class Index extends Action
 {
@@ -41,7 +41,7 @@ class Index extends Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Fidesio_Recipe::recipe_info');
+        $resultPage->setActiveMenu('Skorzhyk_Recipe::recipe_info');
         $resultPage->getConfig()->getTitle()->prepend(__('Recipe Information'));
 
         return $resultPage;
@@ -55,6 +55,6 @@ class Index extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fidesio_Base::activate');
+        return true;
     }
 }

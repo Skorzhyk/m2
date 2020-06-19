@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model\ResourceModel\Recipe\Grid;
+namespace Skorzhyk\Recipe\Model\ResourceModel\Recipe\Grid;
 
 use Skorzhyk\Recipe\Model\ResourceModel\Recipe;
 use Skorzhyk\Recipe\Model\ResourceModel\Recipe\Collection as GridCollection;
@@ -10,7 +10,7 @@ use Magento\Framework\View\Element\UiComponent\DataProvider\Document;
 
 /**
  * Class Collection
- * @package Fidesio\Recipe\Model\ResourceModel\Recipe\Grid
+ * @package Skorzhyk\Recipe\Model\ResourceModel\Recipe\Grid
  */
 class Collection extends GridCollection
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
 use Magento\Framework\Model\AbstractExtensibleModel;
 use Magento\Inventory\Model\ResourceModel\SourceCarrierLink as SourceCarrierLinkResourceModel;

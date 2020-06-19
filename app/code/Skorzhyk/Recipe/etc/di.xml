@@ -4,17 +4,17 @@
     <!--<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">-->
         <!--<arguments>-->
             <!--<argument name="collections" xsi:type="array">-->
-                <!--<item name="fidesio_recipe_listing_data_source" xsi:type="string">-->
-                    <!--Fidesio\Recipe\Model\ResourceModel\Recipe\Grid\Collection-->
+                <!--<item name="skorzhyk_recipe_listing_data_source" xsi:type="string">-->
+                    <!--Skorzhyk\Recipe\Model\ResourceModel\Recipe\Grid\Collection-->
                 <!--</item>-->
             <!--</argument>-->
         <!--</arguments>-->
     <!--</type>-->
-    <!--<virtualType name="Fidesio\Recipe\Model\ResourceModel\Recipe\Grid\Collection"-->
+    <!--<virtualType name="Skorzhyk\Recipe\Model\ResourceModel\Recipe\Grid\Collection"-->
                  <!--type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">-->
         <!--<arguments>-->
-            <!--<argument name="mainTable" xsi:type="string">fidesio_recipe</argument>-->
-            <!--<argument name="resourceModel" xsi:type="string">Fidesio\Recipe\Model\ResourceModel\Recipe</argument>-->
+            <!--<argument name="mainTable" xsi:type="string">skorzhyk_recipe</argument>-->
+            <!--<argument name="resourceModel" xsi:type="string">Skorzhyk\Recipe\Model\ResourceModel\Recipe</argument>-->
         <!--</arguments>-->
     <!--</virtualType>-->
     <!--<virtualType name="RecipeFileUploader" type="Magento\Catalog\Model\ImageUploader">-->
@@ -27,17 +27,17 @@
             <!--</argument>-->
         <!--</arguments>-->
     <!--</virtualType>-->
-    <!--<type name="Fidesio\Recipe\Controller\Adminhtml\File\Upload">-->
+    <!--<type name="Skorzhyk\Recipe\Controller\Adminhtml\File\Upload">-->
         <!--<arguments>-->
             <!--<argument name="fileUploader" xsi:type="object">RecipeFileUploader</argument>-->
         <!--</arguments>-->
     <!--</type>-->
-    <!--<type name="Fidesio\Recipe\Model\MoveFile">-->
+    <!--<type name="Skorzhyk\Recipe\Model\MoveFile">-->
         <!--<arguments>-->
             <!--<argument name="fileUploader" xsi:type="object">RecipeFileUploader</argument>-->
         <!--</arguments>-->
     <!--</type>-->
-    <!--<type name="Fidesio\Recipe\Controller\Index\Save">-->
+    <!--<type name="Skorzhyk\Recipe\Controller\Index\Save">-->
         <!--<arguments>-->
             <!--<argument name="fileUploader" xsi:type="object">RecipeFileUploader</argument>-->
         <!--</arguments>-->

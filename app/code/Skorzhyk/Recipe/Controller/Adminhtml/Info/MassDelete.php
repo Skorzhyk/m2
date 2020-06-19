@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Adminhtml\Info;
+namespace Skorzhyk\Recipe\Controller\Adminhtml\Info;
 
 use Exception;
 use Skorzhyk\Recipe\Model\Recipe;
@@ -16,7 +16,7 @@ use Magento\Ui\Component\MassAction\Filter;
 
 /**
  * Class MassDelete
- * @package Fidesio\Recipe\Controller\Adminhtml\Info
+ * @package Skorzhyk\Recipe\Controller\Adminhtml\Info
  */
 class MassDelete extends Action
 {
@@ -89,6 +89,6 @@ class MassDelete extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fidesio_Base::activate');
+        return true;
     }
 }

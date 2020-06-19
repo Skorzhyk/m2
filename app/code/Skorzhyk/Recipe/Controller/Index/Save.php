@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Index;
+namespace Skorzhyk\Recipe\Controller\Index;
 
 use Exception;
-use Fidesio\ChefInfo\Model\ChefInfoEntity;
-use Fidesio\Recipe\Model\MoveFile;
-use Fidesio\Recipe\Model\RecipeFactory;
+use Skorzhyk\ChefInfo\Model\ChefInfoEntity;
+use Skorzhyk\Recipe\Model\MoveFile;
+use Skorzhyk\Recipe\Model\RecipeFactory;
 use Magento\Catalog\Model\ImageUploader;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\App\Action\Action;
@@ -20,7 +20,7 @@ use Magento\Store\Model\Store;
 
 /**
  * Class Save
- * @package Fidesio\Recipe\Controller\Index
+ * @package Skorzhyk\Recipe\Controller\Index
  */
 class Save extends Action
 {

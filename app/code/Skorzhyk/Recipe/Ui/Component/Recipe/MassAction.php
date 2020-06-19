@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Ui\Component\Recipe;
+namespace Skorzhyk\Recipe\Ui\Component\Recipe;
 
 use Magento\Framework\AuthorizationInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
@@ -11,7 +11,7 @@ use Magento\Ui\Component\AbstractComponent;
 
 /**
  * Class MassAction
- * @package Fidesio\Recipe\Ui\Component\Recipe
+ * @package Skorzhyk\Recipe\Ui\Component\Recipe
  */
 class MassAction extends AbstractComponent
 {
@@ -76,7 +76,7 @@ class MassAction extends AbstractComponent
         switch ($actionType) {
             case 'status':
             case 'delete':
-                $isAllowed = $this->authorization->isAllowed('Fidesio_Base::activate');
+                $isAllowed = true;
                 break;
             default:
                 break;

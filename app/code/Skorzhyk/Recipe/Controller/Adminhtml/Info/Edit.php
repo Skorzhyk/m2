@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Adminhtml\Info;
+namespace Skorzhyk\Recipe\Controller\Adminhtml\Info;
 
-use Fidesio\Recipe\Model\RecipeFactory;
+use Skorzhyk\Recipe\Model\RecipeFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
@@ -14,7 +14,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Edit
- * @package Fidesio\Recipe\Controller\Adminhtml\Info
+ * @package Skorzhyk\Recipe\Controller\Adminhtml\Info
  */
 class Edit extends Action
 {
@@ -53,7 +53,7 @@ class Edit extends Action
     public function execute()
     {
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Fidesio_Recipe::recipe_info');
+        $resultPage->setActiveMenu('Skorzhyk_Recipe::recipe_info');
         $resultPage->getConfig()->getTitle()->prepend(__('Add Recipe Information'));
 
         if ($this->getRequest()->getParam('id')) {
@@ -71,6 +71,6 @@ class Edit extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fidesio_Base::activate');
+        return true;
     }
 }

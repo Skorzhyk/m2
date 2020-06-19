@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Ui\Component\Listing\Columns;
+namespace Skorzhyk\Recipe\Ui\Component\Listing\Columns;
 
-use Fidesio\ChefInfo\Model\Config\Source\ChefList;
+use Skorzhyk\ChefInfo\Model\Config\Source\ChefList;
 use Magento\Framework\Data\OptionSourceInterface;
 use Magento\Framework\Exception\LocalizedException;
 
 /**
  * Class Chef
- * @package Fidesio\Recipe\Ui\Component\Listing\Columns
+ * @package Skorzhyk\Recipe\Ui\Component\Listing\Columns
  */
 class Chef implements OptionSourceInterface
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Fidesio\Recipe\Controller\Customer;
+namespace Skorzhyk\Recipe\Controller\Customer;
 
-use Fidesio\ChefInfo\Model\ChefInfoEntity;
-use Fidesio\Customer\Model\Customer;
+use Skorzhyk\ChefInfo\Model\ChefInfoEntity;
+use Skorzhyk\Customer\Model\Customer;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -12,7 +12,7 @@ use Magento\Framework\UrlInterface;
 
 /**
  * Class Index
- * @package Fidesio\Recipe\Controller\Customer
+ * @package Skorzhyk\Recipe\Controller\Customer
  */
 class Index extends Action
 {

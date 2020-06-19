@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
 use Skorzhyk\Recipe\Model\ResourceModel\Recipe\CollectionFactory;
 use Magento\Framework\DataObject;
@@ -13,7 +13,7 @@ use Magento\Ui\DataProvider\AbstractDataProvider;
 
 /**
  * Class DataProvider
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class DataProvider extends AbstractDataProvider
 {

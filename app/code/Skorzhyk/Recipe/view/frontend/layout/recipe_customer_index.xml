@@ -9,7 +9,7 @@
             </action>
         </referenceBlock>
         <referenceContainer name="content">
-            <block class="Fidesio\Recipe\Block\Recipe" name="recipe" template="Fidesio_Recipe::recipe.phtml"
+            <block class="Skorzhyk\Recipe\Block\Recipe" name="recipe" template="Skorzhyk_Recipe::recipe.phtml"
                    cacheable="false"/>
         </referenceContainer>
     </body>

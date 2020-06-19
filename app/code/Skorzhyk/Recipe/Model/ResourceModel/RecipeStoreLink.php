@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model\ResourceModel;
+namespace Skorzhyk\Recipe\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
@@ -13,7 +13,7 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 class RecipeStoreLink extends AbstractDb
 {
     /** @var string */
-    const TABLE_NAME_RECIPE_STORE_LINK = 'fidesio_recipe_store';
+    const TABLE_NAME_RECIPE_STORE_LINK = 'skorzhyk_recipe_store';
 
     /** @var string */
     const ID_FIELD_NAME = 'link_id';

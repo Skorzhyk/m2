@@ -1,13 +1,13 @@
 <?php
 
-namespace Fidesio\Recipe\Model\Config\Source;
+namespace Skorzhyk\Recipe\Model\Config\Source;
 
 use Skorzhyk\Recipe\Model\ResourceModel\Recipe\CollectionFactory;
 use Magento\Eav\Model\Entity\Attribute\Source\AbstractSource;
 
 /**
  * Class RecipeList
- * @package Fidesio\ChefInfo\Model\Config\Source
+ * @package Skorzhyk\ChefInfo\Model\Config\Source
  * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  */
 class RecipeList extends AbstractSource

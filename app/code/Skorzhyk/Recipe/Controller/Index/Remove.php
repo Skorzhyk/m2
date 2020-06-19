@@ -1,10 +1,10 @@
 <?php
 
-namespace Fidesio\Recipe\Controller\Index;
+namespace Skorzhyk\Recipe\Controller\Index;
 
 use Exception;
-use Fidesio\ChefInfo\Model\ChefInfoEntity;
-use Fidesio\Recipe\Model\RecipeRepository;
+use Skorzhyk\ChefInfo\Model\ChefInfoEntity;
+use Skorzhyk\Recipe\Model\RecipeRepository;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Class Remove
- * @package Fidesio\Recipe\Controller\Index
+ * @package Skorzhyk\Recipe\Controller\Index
  */
 class Remove extends Action
 {

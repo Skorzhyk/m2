@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model\ResourceModel\RecipeStoreLink;
+namespace Skorzhyk\Recipe\Model\ResourceModel\RecipeStoreLink;
 
-use Fidesio\Recipe\Model\RecipeStoreLink as RecipeStoreLinkModel;
-use Fidesio\Recipe\Model\ResourceModel\RecipeStoreLink as RecipeStoreLinkResourceModel;
+use Skorzhyk\Recipe\Model\RecipeStoreLink as RecipeStoreLinkModel;
+use Skorzhyk\Recipe\Model\ResourceModel\RecipeStoreLink as RecipeStoreLinkResourceModel;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
 /**

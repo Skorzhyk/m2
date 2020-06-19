@@ -3,12 +3,12 @@
       xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">fidesio_recipe_edit_form.fidesio_recipe_edit_form_data_source</item>
-            <item name="deps" xsi:type="string">fidesio_recipe_edit_form.fidesio_recipe_edit_form_data_source</item>
+            <item name="provider" xsi:type="string">skorzhyk_recipe_edit_form.skorzhyk_recipe_edit_form_data_source</item>
+            <item name="deps" xsi:type="string">skorzhyk_recipe_edit_form.skorzhyk_recipe_edit_form_data_source</item>
         </item>
         <item name="config" xsi:type="array">
             <item name="dataScope" xsi:type="string">data</item>
-            <item name="namespace" xsi:type="string">fidesio_recipe_edit_form</item>
+            <item name="namespace" xsi:type="string">skorzhyk_recipe_edit_form</item>
         </item>
         <item name="template" xsi:type="string">templates/form/collapsible</item>
         <item name="buttons" xsi:type="array">
@@ -26,10 +26,10 @@
             </item>
         </item>
     </argument>
-    <dataSource name="fidesio_recipe_edit_form_data_source">
+    <dataSource name="skorzhyk_recipe_edit_form_data_source">
         <argument name="dataProvider" xsi:type="configurableObject">
-            <argument name="class" xsi:type="string">Fidesio\Recipe\Model\DataProvider</argument>
-            <argument name="name" xsi:type="string">fidesio_recipe_edit_form_data_source</argument>
+            <argument name="class" xsi:type="string">Skorzhyk\Recipe\Model\DataProvider</argument>
+            <argument name="name" xsi:type="string">skorzhyk_recipe_edit_form_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">recipe_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
@@ -54,7 +54,7 @@
         </argument>
         <field name="customer_id">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Fidesio\Recipe\Ui\Component\Listing\Columns\Chef</item>
+                <item name="options" xsi:type="object">Skorzhyk\Recipe\Ui\Component\Listing\Columns\Chef</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Chef</item>
@@ -66,7 +66,7 @@
         </field>
         <field name="status">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">Fidesio\Recipe\Ui\Component\Listing\Columns\Status</item>
+                <item name="options" xsi:type="object">Skorzhyk\Recipe\Ui\Component\Listing\Columns\Status</item>
                 <item name="config" xsi:type="array">
                     <item name="dataType" xsi:type="string">select</item>
                     <item name="label" xsi:type="string" translate="true">Status</item>
@@ -124,7 +124,7 @@
             <formElements>
                 <multiselect>
                     <settings>
-                        <options class="Fidesio\Recipe\Ui\Component\Listing\Columns\Store\Options"/>
+                        <options class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\Store\Options"/>
                     </settings>
                 </multiselect>
             </formElements>

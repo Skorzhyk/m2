@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Controller\Adminhtml\Info;
+namespace Skorzhyk\Recipe\Controller\Adminhtml\Info;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\Result\RedirectFactory;
 use Magento\Framework\Controller\Result\Redirect;
 use Magento\Backend\App\Action;
-use Fidesio\Recipe\Model\RecipeFactory;
-use Fidesio\Recipe\Model\RecipeEntity;
-use Fidesio\Recipe\Model\MoveFile;
+use Skorzhyk\Recipe\Model\RecipeFactory;
+use Skorzhyk\Recipe\Model\RecipeEntity;
+use Skorzhyk\Recipe\Model\MoveFile;
 use Exception;
 
 /**
  * Class Create
- * @package Fidesio\Recipe\Controller\Adminhtml\Info
+ * @package Skorzhyk\Recipe\Controller\Adminhtml\Info
  */
 class Create extends Action
 {
@@ -95,6 +95,6 @@ class Create extends Action
      */
     protected function _isAllowed()
     {
-        return $this->_authorization->isAllowed('Fidesio_Base::activate');
+        return true;
     }
 }

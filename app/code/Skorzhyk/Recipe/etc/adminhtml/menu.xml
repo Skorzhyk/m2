@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <!-- parent is missing -->
     <menu>
-        <add id="Fidesio_Recipe::recipe" title="Recipes" module="Fidesio_Recipe"
+        <add id="Skorzhyk_Recipe::recipe" title="Recipes" module="Skorzhyk_Recipe"
              sortOrder="400"
-             parent="Fidesio_Base::base"
              action="recipe/info"
-             resource="Fidesio_Recipe::recipe"/>
+             resource="Skorzhyk_Recipe::recipe"/>
     </menu>
 </config>

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Ui\Component\Listing\Columns;
+namespace Skorzhyk\Recipe\Ui\Component\Listing\Columns;
 
-use Fidesio\Recipe\Model\Config\Source\RecipeConfig;
+use Skorzhyk\Recipe\Model\Config\Source\RecipeConfig;
 use Magento\Framework\Data\OptionSourceInterface;
 
 /**
  * Class Status
- * @package Fidesio\Recipe\Ui\Component\Listing\Columns
+ * @package Skorzhyk\Recipe\Ui\Component\Listing\Columns
  */
 class Status implements OptionSourceInterface
 {

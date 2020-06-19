@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model\Config\Source;
+namespace Skorzhyk\Recipe\Model\Config\Source;
 
 /**
  * Class RecipeConfig
- * @package Fidesio\Recipe\Model\Config\Source
+ * @package Skorzhyk\Recipe\Model\Config\Source
  */
 class RecipeConfig
 {

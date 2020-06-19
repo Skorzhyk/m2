@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Ui\Component\Listing\Columns;
+namespace Skorzhyk\Recipe\Ui\Component\Listing\Columns;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
@@ -11,7 +11,7 @@ use Magento\Framework\UrlInterface;
 
 /**
  * Class RecipeActions
- * @package Fidesio\Recipe\Ui\Component\Listing\Columns
+ * @package Skorzhyk\Recipe\Ui\Component\Listing\Columns
  */
 class RecipeActions extends Column
 {

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Block;
+namespace Skorzhyk\Recipe\Block;
 
-use Fidesio\ChefInfo\Model\ChefInfoEntity;
-use Fidesio\Customer\Model\Customer;
-use Fidesio\Recipe\Model\Config\Source\RecipeConfig;
-use Fidesio\Recipe\Model\Recipe as RecipeModel;
-use Fidesio\Recipe\Model\RecipeEntity;
-use Fidesio\Recipe\Model\RecipeRepository;
+use Skorzhyk\ChefInfo\Model\ChefInfoEntity;
+use Skorzhyk\Customer\Model\Customer;
+use Skorzhyk\Recipe\Model\Config\Source\RecipeConfig;
+use Skorzhyk\Recipe\Model\Recipe as RecipeModel;
+use Skorzhyk\Recipe\Model\RecipeEntity;
+use Skorzhyk\Recipe\Model\RecipeRepository;
 use Magento\Customer\Model\Session as CustomerSession;
 use Magento\Framework\DataObject;
 use Magento\Framework\View\Element\Template;
@@ -18,7 +18,7 @@ use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 
 /**
  * Class Recipe
- * @package Fidesio\Product\Block
+ * @package Skorzhyk\Product\Block
  */
 class Recipe extends Template
 {
@@ -139,7 +139,7 @@ class Recipe extends Template
         foreach ($orders as $order) {
             $orderItems = $order->getAllItems();
             foreach ($orderItems as $orderItem) {
-                $recipeInfo = $orderItem->getProduct()->getFidesioRecipe();
+                $recipeInfo = $orderItem->getProduct()->getSkorzhykRecipe();
                 if ($recipeInfo) {
                     array_push($source, explode(',', $recipeInfo));
                 }

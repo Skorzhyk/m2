@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
-use Fidesio\Recipe\Model\Config\Source\RecipeConfig;
+use Skorzhyk\Recipe\Model\Config\Source\RecipeConfig;
 use Magento\Framework\DataObject;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\UrlInterface;
@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 
 /**
  * Class RecipeEntity
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class RecipeEntity extends DataObject
 {

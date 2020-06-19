@@ -1,6 +1,6 @@
 <?php
 
-namespace Fidesio\Recipe\Model;
+namespace Skorzhyk\Recipe\Model;
 
 use Exception;
 use Skorzhyk\Recipe\Model\ResourceModel\Recipe as ResourceRecipe;
@@ -12,7 +12,7 @@ use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
  * Class RecipeRepository
- * @package Fidesio\Recipe\Model
+ * @package Skorzhyk\Recipe\Model
  */
 class RecipeRepository
 {

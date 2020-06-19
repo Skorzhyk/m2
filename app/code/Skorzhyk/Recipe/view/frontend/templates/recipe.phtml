@@ -1,6 +1,6 @@
 <?php
 /**
- * @var $block Fidesio\Recipe\Block\Recipe
+ * @var $block Skorzhyk\Recipe\Block\Recipe
  */
 
 $recipes = $block->getRecipes();
@@ -35,7 +35,7 @@ $isChef = $block->isCustomerChef();
                 </td>
                 <?php if ($isChef) : ?>
                     <td>
-                        <a data-mage-init='{"Fidesio_Recipe/js/remove-recipe": {}}'
+                        <a data-mage-init='{"Skorzhyk_Recipe/js/remove-recipe": {}}'
                            href="<?= /* @noEscape */ $block->getRemoveUrl($recipe); ?>" class="action-delete inner" title="<?= __("Remove") ?>"></a>
                     </td>
                 <?php endif; ?>
