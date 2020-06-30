@@ -78,6 +78,7 @@ class Recipe extends AbstractDb
             $connection->rollBack();
             throw $e;
         }
+
         return $this;
     }
 

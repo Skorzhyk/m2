@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source</item>
+            <item name="deps" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source</item>
+        </item>
+    </argument>
+
+    <settings>
+        <spinner>skorzhyk_recipe_listing_columns</spinner>
+        <deps>
+            <dep>skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source</dep>
+        </deps>
+    </settings>
+
+<!--    <item name="buttons" xsi:type="array">-->
+<!--        <item name="add" xsi:type="array">-->
+<!--            <item name="name" xsi:type="string">add</item>-->
+<!--            <item name="label" xsi:type="string" translate="true">Add New Recipe</item>-->
+<!--            <item name="class" xsi:type="string">primary</item>-->
+<!--            <item name="url" xsi:type="string">*/*/edit</item>-->
+<!--        </item>-->
+<!--    </item>-->
+
+    <dataSource name="skorzhyk_recipe_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">recipe_id</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <dataProvider class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider"
+                      name="skorzhyk_recipe_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>recipe_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+
+    <listingToolbar name="listing_top">
+        <bookmark name="bookmarks"/>
+<!--        <columnsControls name="columns_controls">-->
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="columnsData" xsi:type="array">-->
+<!--                        <item name="provider" xsi:type="string">-->
+<!--                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_columns-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                    <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>-->
+<!--                    <item name="displayArea" xsi:type="string">dataGridActions</item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--        </columnsControls>-->
+<!--        <container name="columns_controls">-->
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="columnsData" xsi:type="array">-->
+<!--                        <item name="provider" xsi:type="string">-->
+<!--                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.skorzhyk_recipe_listing_columns-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                    <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>-->
+<!--                    <item name="displayArea" xsi:type="string">dataGridActions</item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--        </container>-->
+
+<!--        <filterSearch name="fulltext">-->
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="provider" xsi:type="string">skorzhyk_recipe_listing.skorzhyk_recipe_listing_data_source-->
+<!--                    </item>-->
+<!--                    <item name="chipsProvider" xsi:type="string">-->
+<!--                        skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters_chips-->
+<!--                    </item>-->
+<!--                    <item name="storageConfig" xsi:type="array">-->
+<!--                        <item name="provider" xsi:type="string">-->
+<!--                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks-->
+<!--                        </item>-->
+<!--                        <item name="namespace" xsi:type="string">current.search</item>-->
+<!--                    </item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--        </filterSearch>-->
+<!--        <filters name="listing_filters">-->
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="displayArea" xsi:type="string">dataGridFilters</item>-->
+<!--                    <item name="dataScope" xsi:type="string">filters</item>-->
+<!--                    <item name="storageConfig" xsi:type="array">-->
+<!--                        <item name="provider" xsi:type="string">-->
+<!--                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks-->
+<!--                        </item>-->
+<!--                        <item name="namespace" xsi:type="string">current.filters</item>-->
+<!--                    </item>-->
+<!--                    <item name="childDefaults" xsi:type="array">-->
+<!--                        <item name="provider" xsi:type="string">-->
+<!--                            skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters-->
+<!--                        </item>-->
+<!--                        <item name="imports" xsi:type="array">-->
+<!--                            <item name="visible" xsi:type="string">-->
+<!--                                skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.bookmarks:current.columns.${ $.index }.visible-->
+<!--                            </item>-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                </item>-->
+<!--            </argument>-->
+<!--            <filterRange name="id">-->
+<!--                <argument name="data" xsi:type="array">-->
+<!--                    <item name="config" xsi:type="array">-->
+<!--                        <item name="dataScope" xsi:type="string">id</item>-->
+<!--                        <item name="label" xsi:type="string" translate="true">ID</item>-->
+<!--                        <item name="childDefaults" xsi:type="array">-->
+<!--                            <item name="provider" xsi:type="string">-->
+<!--                                skorzhyk_recipe_listing.skorzhyk_recipe_listing.listing_top.listing_filters-->
+<!--                            </item>-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                </argument>-->
+<!--                <filterInput name="from">-->
+<!--                    <argument name="data" xsi:type="array">-->
+<!--                        <item name="config" xsi:type="array">-->
+<!--                            <item name="dataScope" xsi:type="string">from</item>-->
+<!--                            <item name="label" xsi:type="string" translate="true">from</item>-->
+<!--                            <item name="placeholder" xsi:type="string" translate="true">From</item>-->
+<!--                        </item>-->
+<!--                    </argument>-->
+<!--                </filterInput>-->
+<!--                <filterInput name="to">-->
+<!--                    <argument name="data" xsi:type="array">-->
+<!--                        <item name="config" xsi:type="array">-->
+<!--                            <item name="dataScope" xsi:type="string">to</item>-->
+<!--                            <item name="label" xsi:type="string" translate="true">to</item>-->
+<!--                            <item name="placeholder" xsi:type="string" translate="true">To</item>-->
+<!--                        </item>-->
+<!--                    </argument>-->
+<!--                </filterInput>-->
+<!--            </filterRange>-->
+<!--        </filters>-->
+        <massaction name="listing_massaction"
+                    component="Magento_Ui/js/grid/tree-massactions">
+            <action name="delete">
+                <settings>
+                    <confirm>
+                        <message translate="true">Delete selected items?</message>
+                        <title translate="true">Delete items</title>
+                    </confirm>
+                    <url path="recipe/info/massDelete"/>
+                    <type>delete</type>
+                    <label translate="true">Delete</label>
+                </settings>
+            </action>
+        </massaction>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+
+    <columns name="skorzhyk_recipe_listing_columns">
+        <selectionsColumn name="ids" sortOrder="10">
+            <settings>
+                <indexField>entity_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>55</resizeDefaultWidth>
+            </settings>
+        </selectionsColumn>
+        <column name="recipe_id" sortOrder="20">
+            <settings>
+                <filter>textRange</filter>
+                <label translate="true">ID</label>
+                <sorting>asc</sorting>
+            </settings>
+        </column>
+        <column name="customer_id" component="Magento_Ui/js/grid/columns/select" sortOrder="25">
+            <settings>
+                <options class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\Chef"/>
+                <filter>select</filter>
+                <dataType>select</dataType>
+                <label translate="true">Chef</label>
+                <sorting>asc</sorting>
+            </settings>
+<!--            <argument name="data" xsi:type="array">-->
+<!--                <item name="config" xsi:type="array">-->
+<!--                    <item name="editor" xsi:type="array">-->
+<!--                        <item name="editorType" xsi:type="string">select</item>-->
+<!--                        <item name="validation" xsi:type="array">-->
+<!--                            <item name="required-entry" xsi:type="boolean">false</item>-->
+<!--                        </item>-->
+<!--                    </item>-->
+<!--                </item>-->
+<!--            </argument>-->
+        </column>
+        <column name="status">
+            <argument name="data" xsi:type="array">
+                <item name="options" xsi:type="object">Skorzhyk\Recipe\Ui\Component\Listing\Columns\Status</item>
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">select</item>
+                    <item name="label" xsi:type="string" translate="true">status</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
+                    <item name="dataType" xsi:type="string">select</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">select</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">false</item>
+                        </item>
+                    </item>
+                    <item name="sortOrder" xsi:type="number">30</item>
+                </item>
+            </argument>
+        </column>
+        <column name="title">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">text</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">true</item>
+                        </item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">title</item>
+                    <item name="sortOrder" xsi:type="number">40</item>
+                </item>
+            </argument>
+        </column>
+        <column name="file">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">File</item>
+                    <item name="sortOrder" xsi:type="number">50</item>
+                </item>
+            </argument>
+        </column>
+        <column name="store_id" class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\Store">
+            <settings>
+                <label translate="true">Store View</label>
+                <bodyTmpl>ui/grid/cells/html</bodyTmpl>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+        <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
+                    <item name="dataType" xsi:type="string">date</item>
+                    <item name="label" xsi:type="string" translate="true">Created</item>
+                    <item name="sortOrder" xsi:type="number">60</item>
+                </item>
+            </argument>
+        </column>
+        <column name="updated_at" class="Magento\Ui\Component\Listing\Columns\Date">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">dateRange</item>
+                    <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/date</item>
+                    <item name="dataType" xsi:type="string">date</item>
+                    <item name="label" xsi:type="string" translate="true">Updated</item>
+                    <item name="sortOrder" xsi:type="number">70</item>
+                </item>
+            </argument>
+        </column>
+        <actionsColumn name="actions" class="Skorzhyk\Recipe\Ui\Component\Listing\Columns\RecipeActions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">false</item>
+                    <item name="indexField" xsi:type="string">recipe_id</item>
+                    <item name="sortOrder" xsi:type="number">80</item>
+                </item>
+            </argument>
+        </actionsColumn>
+    </columns>
+</listing>
